@@ -4,7 +4,6 @@
 
 import argparse
 import csv
-import cStringIO
 import requests
 from datetime import datetime
 
@@ -28,6 +27,7 @@ if __name__ == '__main__':
     # For potentially large downloads, stream the response, and iterate
     # over the lines.
     csvdata = requests.get(args.URL, stream=True).iter_lines()
+    # Use a Unicode wrapper around DictReader
     mcsv = unicode_csv_dictreader(csvdata)
     for row in mcsv:
         name = row['Name']
