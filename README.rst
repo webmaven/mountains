@@ -2,7 +2,7 @@ mountains.py
 ============
 
 A simple command line script that processes a remote URL, retreives a csv file
-at that URL, and outputs ia timestamp and the name and altitude (if known) for
+at that URL, and outputs a timestamp and the name and altitude (if known) for
 each.
 
 Is tolerant of unicode csv data (by coercing to UTF-8), and of large files (by
@@ -16,7 +16,7 @@ Usage::
     URL         A URL to a mountain data file.
     
     optional arguments:
-      -h, --help  show this help message and exit``
+      -h, --help  show this help message and exit
 
 Example::
 
